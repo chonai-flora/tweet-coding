@@ -1,0 +1,11 @@
+v=0
+draw=_=>{
+v||createCanvas(w=640,w)+colorMode(HSB,4)+noStroke()
+background(3,4,4,1)
+for(x=-v%71;x<711;x+=71)
+for(y=-x/2;y<694;y+=63){
+fill(sin(PI/90*v)+2,4,cos(PI/180*(x+y+v*5))+2,2)
+circle(x,y,(sin(PI/45*(x+y))+2)*18)
+}
+v++
+}

@@ -1,0 +1,14 @@
+r=0
+draw=_=>{
+r||createCanvas(w=640,w)+fill(h=w/2,200)+noStroke()
+background(0)
+for(x=-220;x<221;x+=11)
+for(y=-220;y<221;y+=11){
+push()
+translate(x+h,y+h)
+rotate(r+PI/90*dist(x,y,90*sin(r),h))
+circle(x,y-x,sq(cos(r+y*PI/180)*exp(.9)))
+pop()
+}
+r+=PI/180
+}

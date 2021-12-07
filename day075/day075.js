@@ -1,0 +1,11 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+stroke(w)
+background(0)
+for(f=0;f<w*10;f++){
+x=PI/30*(f%99-35)
+y=PI/30*(f/99)-.5
+line(v=x*99+(y-PI/30)*64,y*99+noise(x+t,y)*99,v+10,y*99+noise(PI/30+x+t,y)*99)
+}
+t+=PI/90
+}

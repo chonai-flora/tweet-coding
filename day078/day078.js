@@ -1,0 +1,10 @@
+r=0
+draw=_=>{
+r||createCanvas(w=640,w)+fill(h=w/2,200)
+background(0)
+for(t=0;t<TAU;t+=PI/90){
+textSize(abs(v=(f=tan(r)*360)*noise(t)%450)/7+1)
+text("#つぶやきProcessing".charAt(int(90/PI*t)%15),v*cos(u=f*noise(t*7)/99+t)+h,v*sin(u)+h)
+}
+r+=PI/360
+}

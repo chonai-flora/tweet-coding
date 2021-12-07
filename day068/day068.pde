@@ -1,0 +1,13 @@
+r=0
+draw=_=>{
+r||createCanvas(w=640,640)+noFill()+stroke(w,w,0,200)
+background(0)
+scale(4)
+for(f=0;f<160;f+=3){
+v=45/PI*r+2e3
+s=noise(f,r/2)*8
+for(t=r;t<r+TAU-.3;t+=PI/9)
+arc(7*cos(t)+f,(f+v*noise(f))%(160+s*4)-s*2+7*sin(t),s,s,t,t+PI/2)
+}
+r+=PI/135
+}

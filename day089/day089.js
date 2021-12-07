@@ -1,0 +1,11 @@
+t=f=0
+draw=_=>{
+t||createCanvas(w=640,w)
+background(f%2?w:c='#0064FF')
+stroke(f%2?c:w)
+for(p=0;p<w*10;p++){
+x=PI/30*(p%99-35);y=PI/30*(p/99)-.5
+line(v=x*99+(y-PI/30),y*99+noise(PI/90*t+x,y)*99,v+10,y*99+noise(PI/30+PI/90*t+x,y)*99)
+}
+t++;if(t%60==0)f++
+}

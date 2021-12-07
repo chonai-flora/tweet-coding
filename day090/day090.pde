@@ -1,0 +1,9 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+rectMode(CENTER)+noStroke`#つぶやきProcessing`
+background(0)
+for(x=0;x<w;x+=11)
+for(y=0;y<w;y+=11){fill(y/2,dist(x,y,h=w/2,h)/2,h)
+square(x,y,(sin(dist(x,y,50*asin(sin(t))+h,50*asin(cos(PI/180*x+t))+h)*(PI/45)+t)+2)*3.5)}
+t+=PI/90
+}

@@ -1,0 +1,9 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+stroke`#つぶやきProcessing`
+c=cos;e=circle;background(0);scale(2);fill(0)
+e(h=w/4,h,r=80);e(r*c(t)+h,-r*sin(t)+h,r)
+a=(T,R)=>e(r*c(T)*(1+c(T))+h-40,-r*sin(T)*(1+c(T))+h,R)
+for(u=0;u<t;u+=PI/180)fill(w);a(u,6);fill(h)
+a(t,9);t+=PI/180
+}

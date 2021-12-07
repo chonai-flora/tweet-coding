@@ -1,0 +1,9 @@
+r=0
+draw=_=>{
+r||createCanvas(w=640,w)+fill(w,a=200)+noStroke()
+background(0)
+for(t=0;t<TAU;t+=PI/60)
+for(u=0;u<TAU-.3;u+=PI/9){textSize(max(sin(t+u+r*9)*17,2))
+text("+-+",a*cos(r+t)+250*asin(cos(u))+320,a*sin(r+t)+250*asin(sin(u))+320)}
+r+=PI/360
+}

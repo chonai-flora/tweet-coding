@@ -1,0 +1,16 @@
+r=0
+draw=_=>{
+r||createCanvas(w=640,w)+stroke(w)
+background(0)
+fill(w,200)
+rect(0,0,abs(sin(r))*w,w)
+fill('#D9DADF')
+translate(w/2,w/2)
+rotate(acos(cos(r*2)))
+for(f=0;f<10;f++){
+rect(10,110,15,40)
+circle(0,150,50)
+rotate(PI/5)
+}
+r+=PI/360
+}

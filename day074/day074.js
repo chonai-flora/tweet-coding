@@ -1,0 +1,12 @@
+t=v=0
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke(h=w/2)
+background(0)
+fill('yellow')
+for(u=0;u<TAU;u+=PI/12)circle(h*sin(t)*cos(u)+h,h*sin(t)*sin(u)+h,12)
+fill(w)
+circle(h,h,h)
+fill('red')
+arc(h,h,h,h,v,PI+v)
+if(abs(sin(t+=PI/180))<.5)v+=PI/30
+}

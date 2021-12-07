@@ -1,0 +1,9 @@
+r=t=0
+draw=_=>{
+r||createCanvas(w=640,w)+stroke(w,w,0)+noFill(h=w/8)
+background(0)
+scale(4)
+for(u=t;u<t+TAU;u+=PI/9){circle(h*sin(r)*cos(u)+h,h*sin(r)*sin(u)+h,2);arc(7*cos(u)+h,7*sin(u)+h,a=h-15,a,u,u+PI/2)}
+r+=PI/180
+if(abs(sin(r))<.5)t+=PI/45
+}
