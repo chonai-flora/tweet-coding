@@ -1,0 +1,15 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke()
+background(0,12)
+for(x=0;x<w;x+=20)
+for(y=0;y<w;y+=20){
+push()
+fill(noise(sin(t),(x+y)/9)*w/2)
+translate(y,x)
+rotate(x+t)
+circle(9*tan(mag(y,y)),9*tan(mag(y,x)),max(2,sq(sin(y+t)+1)*3))
+pop()
+}
+t+=PI/180
+}

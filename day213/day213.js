@@ -1,0 +1,11 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke(colorMode(HSB,3))
+background(0,.5)
+translate(h=w/2,h)
+for(r=270;r-=18;rotate(r*sin(t)/135))
+for(u=0;u<TAU;u+=PI/90)
+fill(sin(t+u)+2,2,2),
+circle(x=r*asin(tan(t-u)),y=r*atan(cos(u)),mag(x,y)/24);
+t+=PI/540
+}
