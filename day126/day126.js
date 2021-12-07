@@ -1,0 +1,15 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke()
+background(0,50)
+for(x=8;x--;)
+for(y=99;y--;){
+push(u=PI/180*y-abs(asin(cos(t))))
+translate(h=w/2,h)
+rotate(u)
+r=h*cos(PI*(t+u))*u
+square(r*cos(v=PI/4*x),r*sin(v),y/21)
+pop()
+}
+t+=PI/360
+}

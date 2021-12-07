@@ -1,0 +1,13 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)
+background((sin(t/2)+1)*128)
+fill((sin(t/2-PI)+1)*128)
+for(x=704;x-=32;)
+for(y=720;y-=40;){
+u=PI/90*(5*x+y)
+textSize(15*cos(PI/180*y+t)+17)
+text("♩♪♫♬"[int((x+y)/5)%4],x+sin(t-u)*9-32,y+sin(t-u)*25-40)
+}
+t+=PI/90
+}

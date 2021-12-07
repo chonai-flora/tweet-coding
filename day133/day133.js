@@ -1,0 +1,13 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+fill(0)
+background(w)
+for(y=w;y-=80;)
+for(x=648;x-=2;){
+q=a=>20*sin(PI/180*(a+y)+t)+y+9
+circle(x-4,q(x),.5)
+textSize(s=noise(y-x)*52)
+if(x%40==0)text("♩♪♫♬"[int(s)%4],p=(180/PI*t+x-4)%(w+s)-s,q(p))
+}
+t+=PI/90
+}

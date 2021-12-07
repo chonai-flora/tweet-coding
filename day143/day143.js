@@ -1,0 +1,13 @@
+v=0
+draw=_=>{
+v||createCanvas(w=640,w)+noStroke(v=w,n=noise)
+clear(f=_=>fill(0,w,w))
+square(0,99,w)
+fill(0,a=210,a,a)
+for(i=w;i-=8;)
+circle(n(i)*800-40,((n(i,w)*w-v)%525)+w,55*n(4,i));
+f()
+for(i=w;i-=5;)
+circle(i,10*sin(PI/180*(v-i))+99,20);
+v+=3
+}

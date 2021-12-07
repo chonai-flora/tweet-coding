@@ -1,0 +1,9 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke()
+background((sin(t/2)+1)*128,25)
+fill((cos(t/2)+1)*128)
+for(x=n=700;x-=25;)for(y=n;y-=28;)
+circle(x-sin(t-(u=PI/90*(x+51*y)))*25-25,y-sin(t-u)*25-25,cos(PI/180*x+t)*25);
+t+=PI/90
+}

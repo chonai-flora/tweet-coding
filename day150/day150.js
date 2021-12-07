@@ -1,0 +1,9 @@
+t=0
+draw=_=>{
+t||createCanvas(w=800,80)+textSize(s=30)
+background((sin(t)+1)*128)
+fill((sin(t+PI)+1)*128)
+for(i=64;i--;)
+text(String.fromCodePoint(77847+i),(180/PI*t+i%32*s)%(w+s)-s,int(i/32)*s+35);
+t+=PI/180
+}

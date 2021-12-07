@@ -1,0 +1,2 @@
+t=0
+draw=_=>{t||createCanvas(w=640,w,WEBGL)+noStroke(colorMode(HSB,5));background(0);for(x=220;x>-220;x-=40)for(y=200;y>-200;y-=40){push(fill(a=(cos(y+t)+1)*2,4,4));rotateX(t+x);translate(x*atan(sin(t))+y,y-x);torus(25,abs(x)/15,int(a*4),9);pop()}t+=PI/180}

@@ -1,0 +1,9 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w)+frameRate(1)+textSize(90)+textAlign(c=CENTER,c)
+background(h=w/2)
+text(String.fromCodePoint(128335+v),h,h)
+for(i=12;i--;)
+text(String.fromCodePoint(128336+i%12),250*cos(t=PI/6*(i-2))+h,250*sin(t)+h);
+v%=12
+}

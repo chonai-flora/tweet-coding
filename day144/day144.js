@@ -1,0 +1,2 @@
+c=Array(N=30).fill(v=0)
+draw=_=>{for(clear(v++||createCanvas(w=640,w)),noStroke(colorMode(HSB,1)),p=(k,s)=>acos(sin((v+w)/64*noise(k,s)))*205,i=N;i--;)for(fill(c[i],1,1),circle(x=p(i,5),y=p(i,6),N),j=N;j-->i+1;)if(dist(x,y,p(j,5),p(j,6))<N)c[i]=c[j]=noise(j)}
