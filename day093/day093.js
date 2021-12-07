@@ -1,0 +1,11 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke`#つぶやきProcessing`
+background(0)
+for(x=0;x<w;x+=11)for(y=0;y<w;y+=17){
+p=asin(sin(PI/180*y+t))
+q=acos(cos(PI/180*x+t))
+fill(90*p,90*q,h=w/2)
+circle(x,y,(sin(mag(40*p+h,40*q+h)*(PI/30)+t)+2)*3)}
+t+=PI/90
+}

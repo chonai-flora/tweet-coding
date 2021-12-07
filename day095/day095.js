@@ -1,0 +1,15 @@
+r=0
+draw=_=>{
+r||createCanvas(w=640,w,WEBGL)+stroke`#つぶやきProcessing`
+background(0)
+for(x=40;x<w;x+=80)
+for(y=40;y<w;y+=80){
+push(n=noise)
+translate(x-w/2,y-w/2)
+rotate(n(x,y)*r)
+fill(x/4+90,90,y/4+90)
+torus(17,map(n(x*y),0,1,5,14),(s=x+y)%23+2,s%15+3)
+pop()
+}
+r+=PI/90
+}

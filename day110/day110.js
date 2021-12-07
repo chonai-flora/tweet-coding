@@ -1,0 +1,11 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke(colorMode(HSB,9))
+background(6,9,9,1)
+for(i=4;i--;)
+for(u=0;u<TAU;u+=PI/30){
+fill((sin(t+u)+1)*4,7,7,6)
+circle(i*60*(cos(t+u)+cos(9*u))+w/2,i*60*(sin(t)+sin(i*u))+w/2,9)
+}
+t+=PI/270
+}

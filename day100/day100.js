@@ -1,0 +1,14 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w,WEBGL)+stroke(w,200)+noFill()
+background(0)
+for(i=0;i<5;i++)
+for(j=0;j<26;j++)
+for(k=0;k<27;k+=9){
+push(u=TAU/5*i+t)
+translate(w/25*j-w/2,k*9+sin(u+(v=TAU/25*j))*300)
+sphere((cos(u+v-k/12)+1)*15,9,9)
+pop()
+}
+t+=PI/360
+}

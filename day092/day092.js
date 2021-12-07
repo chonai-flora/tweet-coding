@@ -1,0 +1,9 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+textAlign(CENTER)+fill(w,210)
+background(0)
+for(x=0;x<661;x+=22)for(y=0;y<681;y+=34){
+textSize(max(7,sin(t+(u=50*x+y+y))*30+15))
+text("#つぶやきProcessing".charAt((x+y)%15),x+(cos(t+u)*25),y-(25-cos(t+u)*25))}
+t+=PI/90
+}

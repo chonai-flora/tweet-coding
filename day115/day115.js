@@ -1,0 +1,1 @@
+setup=_=>{createCanvas(w=640,w);background(w);textSize(s=80);for(i=2;i--;){for(j=8;j--;)for(k=8;k--;){noFill(c=n=>String.fromCodePoint(9808+n+6*i));rect(x=j*s,y=k*s,s,s);fill(0);text(k==7?c([6,8,7,4,5,7,8,6][j]):k==6?c(9):'',x,y+s)}translate(0,w);scale(1,-1)}}

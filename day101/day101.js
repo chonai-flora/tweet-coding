@@ -1,0 +1,15 @@
+v=0
+draw=_=>{
+v||createCanvas(w=640,w)+textAlign(CENTER)+colorMode(HSB,9)
+background(0,0,0,1)
+for(x=w;x-=40;)
+for(t=0;t<TAU;t+=PI/9){
+n=noise
+r=(x+v)%450
+s=n(x,w)
+fill(n(t,x)*9,7,7)
+textSize(s*45)
+text(`#つぶやきProcessing`[int(x/40+t)%15],r*cos(t)+s*w,r*sin(t)+n(x)*w)
+}
+v+=2
+}

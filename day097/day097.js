@@ -1,0 +1,15 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+fill(w,200)
+background(0)
+for(x=0;x<647;x+=34)
+for(y=0;y<649;y+=36){
+push(s=x+y)
+translate(x,y)
+rotate(s/3+t)
+textSize(max(acos(sin(PI/180*y+t))*15,5))
+text("#つぶやきProcessing".charAt(s%15),10,0)
+pop()
+}
+t+=PI/90
+}

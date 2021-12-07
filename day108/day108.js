@@ -1,0 +1,13 @@
+t=p=q=0
+draw=_=>{
+t||createCanvas(w=640,w)+stroke(w)
+c=circle
+background(0)
+noFill(scale(2))
+c(h=w/4,h,140)
+c(x=84*cos(t)+h,y=84*sin(t)+h,28)
+fill(w)
+for(u=0;u<=t;u+=PI/180)c(p=84*cos(u)-12*cos(6*u)+h,q=84*sin(u)-12*sin(6*u)+h,6);
+line(x,y,p,q)
+t+=PI/180
+}

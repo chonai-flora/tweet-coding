@@ -1,0 +1,14 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w,WEBGL)+noStroke()
+lights(background(0))
+for(x=0;x<647;x+=34)
+for(y=0;y<649;y+=36){
+push(s=x+y+t)
+translate(x-w/2,y-w/2)
+rotateX(PI/180*s)
+box(acos(sin(noise(x)*5+PI/180*y+t))*12)
+pop()
+}
+t+=PI/90
+}

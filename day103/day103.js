@@ -1,0 +1,14 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w,WEBGL)+noFill(stroke(w,200))
+background(0)
+for(y=0;y<w;y+=3){
+push(T=translate)
+T(x=atan(sin(t))*cos(t-y)*w-w/2,y-w/2)
+sphere(s=(t+y)*7%20,6,6)
+T(-x*2,y/2)
+sphere(s,6,6)
+pop()
+}
+t+=PI/360
+}

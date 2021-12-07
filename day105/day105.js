@@ -1,0 +1,16 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w,WEBGL)+noFill(R=rotate)+stroke(w,200)
+background(0)
+for(x=220;x>-219;x-=20)
+for(y=200;y>-199;y-=20){
+push(T=translate)
+R(t/4)
+T(y,y)
+R(mag(x,0)+t/4)
+T(y,y)
+box(sq(sin(t+PI/90*y)*4.5))
+pop()
+}
+t+=PI/180
+}

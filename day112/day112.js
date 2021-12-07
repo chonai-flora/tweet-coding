@@ -1,0 +1,12 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noFill(strokeWeight(5))
+background((sin(t)+1)*128)
+stroke((cos(t)+1)*128)
+translate(w/2,w/2)
+for(r=0;r<90;r+=9){
+arc(20,20,r*6,r*9,asin(cos(u=PI/180*r+t)),sin(u))
+rotate(asin(cos(t)))
+}
+t+=PI/180
+}

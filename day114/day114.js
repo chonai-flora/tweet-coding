@@ -1,0 +1,16 @@
+t=0
+draw=_=>{
+t||noFill(createCanvas(w=640,w))
+background((sin(t)+1)*128)
+stroke((cos(t)+1)*128)
+scale(2)
+translate(w/4,w/4)
+for(r=9;r<250;r+=2){
+push()
+rotate(exp(2)*r+t/2)
+line(0,r,0,r+sin(t)*50)
+circle(r,0,sin(t+r/4)*12+5)
+pop()
+}
+t+=PI/135
+}

@@ -1,0 +1,11 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+fill(w)
+background(0)
+for(x=0;x<w;x+=19)
+for(y=0;y<w;y+=15){
+textSize((sin(PI/60*dist(90*cos(t)+w/2,90*sin(t)+w/2,80*sin(PI/90*y+t),40*acos(cos(PI/90*x+t))))+2)*6)
+text(`@ProcessingOrg`[(x+y)%14],x+5,y+5)
+}
+t+=PI/90
+}
