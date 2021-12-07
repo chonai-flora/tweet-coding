@@ -1,0 +1,10 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w,WEBGL)+noFill(strokeWeight(2))
+background(c=(sin(t)+1)*128)
+stroke((c+128)%256)
+rotateX(PI/2)
+for(i=12,b=n=>push()+rotateY(i*PI/6+t/2)+translate(sin(t+n*PI/3)*250,0)+pop(box(200));i--;b(1))
+b(0);
+t+=PI/360
+}

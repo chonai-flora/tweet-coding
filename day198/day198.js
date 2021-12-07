@@ -1,0 +1,14 @@
+v=0
+draw=_=>{
+v||createCanvas(w=800,80)
+background(0)
+m=l=>y*b+noise(l+a/3*v+x,y)*b
+for(i=999,a=.1,b=99,S=stroke;i--;line(n,m(0),n+9,m(a)))
+x=a*(i%115),
+y=a*(i*.01)-.5,
+fill(i%2==0?w:[w,w,0]),
+S(0,0),
+circle(n=x*b+(y-a),m(0),5),
+S(w);
+v+=.3
+}

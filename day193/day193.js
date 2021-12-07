@@ -1,0 +1,12 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w)+stroke(w,192)
+background(t=PI/270*v,8)
+translate(h=w/2,h)
+for(i=8;i--;pop()){
+push(a=n=>(int(v/30)%2?acos:asin)(tan(n)))
+rotate(PI/4*i+t)
+for(r=9;r<450;r+=PI/9)
+point(r*a(u=noise(a(r/75),a(t*2))),r*atan(u));
+}
+}

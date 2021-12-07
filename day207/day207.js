@@ -1,0 +1,10 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke(fill(w,192))
+background(0,96)
+for(i=360;i--;pop(circle(x=cos(u=i/w*PI*45)*(r=sin(u+i+i/w+t)*450),y=sin(u)*r,mag(x,y)/30)))
+push(),
+translate(h=w/2,h),
+rotate(PI/(45.0+sin(t)+cos(t))*i);
+t+=PI/360
+}

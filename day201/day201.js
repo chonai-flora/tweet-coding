@@ -1,0 +1,10 @@
+t=0
+draw=_=>{
+t++||createCanvas(w=640,w,WEBGL)+noStroke(T=translate,S=sphere)
+lights(background(0))
+for(x=w;x-=64;)for(y=w;y-=64;pop(S(14)))
+push(fill(w,w,0)),
+T(x-w/2,y-w/2,-8),
+S(16),fill(0),
+T(16+16*cos(u=PI/90*(t/2+x+y)),16*sin(u),8);
+}

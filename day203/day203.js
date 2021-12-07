@@ -1,0 +1,11 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w,WEBGL)+stroke(w)
+background(0)
+for(i=64;i--;pop(cylinder(56,90,ceil(N(i)*8)+3)))
+push(N=noise),
+translate(i%9*99-w/2,int(i/9)*99+i%9%2*48-w/2),
+rotate(t+N(i+t)),rotateX(PI/2),
+fill(ceil(N(i+t/4)*75)==i?128:0);
+t+=.02
+}

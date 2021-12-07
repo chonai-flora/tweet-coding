@@ -1,0 +1,13 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+stroke(w,128)
+background(0,8)
+translate(h=w/2,h)
+for(i=8;i--;pop()){
+push(a=n=>asin(sin(n)))
+rotate(PI/4*i+t)
+for(u=0;u<500;u+=PI/9)
+point(u*a(v=noise(a(u/75),a(t))),u*atan(v));
+}
+t+=PI/270
+}

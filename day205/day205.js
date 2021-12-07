@@ -1,0 +1,12 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke(R=PI/360)
+background(0,64)
+for(x=8;x--;)
+for(y=99;y--;pop(circle(v(cos),v(sin),y/24)))
+push(u=R*y-abs(asin(cos(t/2)))),
+v=f=>w*u*f(PI/4*x),
+translate(h=w/2,h),
+rotate(acos(tan(3*(t+u))));
+t+=R
+}

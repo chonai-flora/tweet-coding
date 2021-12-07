@@ -1,0 +1,10 @@
+v=0
+draw=_=>{
+v||createCanvas(w=640,w)+noStroke(S=sin)
+background(96,96)
+t=PI/180*v
+for(i=6;i--;)for(u=0;u<TAU;u+=PI/45)
+r=abs(S(f=t+PI/3*i))*45,
+circle(r*(cos(u)-S(g=(i+int((v+i%3*60)/180)%4+3)*u+t*2))+200*cos(f)+w/2,r*(S(u)+cos(g))+200*S(f)+w/2,r/9);
+v+=.5
+}

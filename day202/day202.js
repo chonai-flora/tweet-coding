@@ -1,0 +1,2 @@
+t=0
+draw=_=>{t||createCanvas(w=640,w)+noStroke(colorMode(HSB,9));background(1,1);for(x=w;x-=80;)for(y=w;y-=80;)for(u=0;u<TAU;u+=.07)fill(noise(a=x+y)+u,7,7),r=abs(s=sin(a+t))*25,circle(r*(cos(u)-sin(v=(a/80-78+ceil(s))*u+t))+x,r*(sin(u)+cos(v))+y,r/9);t+=.01}
