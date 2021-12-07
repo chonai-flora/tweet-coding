@@ -1,0 +1,9 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noFill(d=dist)+rectMode(CENTER)
+background(0)
+for(x=w;x-=16;)
+for(y=w;y-=16;square(x,y,sin(d(x,y,asin(sin(t))+h,50*atan(cos(PI/180*x+t)))*PI/45+t)*9))
+stroke(h=w/2,d(sin(t)*200+h,cos(t)*200+h,x,y),0);
+t+=PI/180
+}

@@ -1,0 +1,14 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+stroke(w,90)
+background(0,8);
+translate(h=w/2,h)
+for(i=4;i--;){
+push()
+rotate(PI/2*i+t)
+for(u=0;u<mag(h,h);u+=PI/9)
+point(u*acos(cos(v=noise(PI/180*u,t))),u*atan(v))
+pop()
+}
+t+=PI/180
+}

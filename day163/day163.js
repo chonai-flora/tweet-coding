@@ -1,0 +1,14 @@
+setup=_=>{
+createCanvas(w=640,w,WEBGL)
+noStroke(f=_=>fill(w,w,0))
+f(background(192))
+circle(0,0,w)
+fill(w)
+circle(0,0,580)
+for(i=8,f(c=curveVertex);i--;endShape()){
+beginShape()
+rotate(PI/4)
+for(j=2;j--;c(220,60))
+c(220,-60)+c(25,0)
+}
+}

@@ -1,0 +1,14 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w)+colorMode(HSB,1)
+background(0)
+for(x=w;x-=40;)
+for(y=w;y-=40;pop(circle(20,0,9))){
+push(t=PI/360*(x+y+v))
+noFill(translate(x,y))
+stroke(n=[abs(sin(t+noise(v/45+x))),1,1,.8])
+circle(0,0,40)
+rotate(t*4)
+fill(...n)
+}
+}

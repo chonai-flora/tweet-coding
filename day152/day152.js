@@ -1,0 +1,13 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke()
+background(0)
+for(x=w;x-=10;)
+for(y=w;y-=16;){
+p=acos(sin(PI/90*y+t))
+q=acos(cos(PI/90*x+t))
+fill(99*p,99*q,h=w/2)
+circle(x,y,(sin(PI/60*dist(40*cos(t)+h,40*sin(t)+h,40*p,40*q)+t)+2)*3)
+}
+t+=PI/90
+}

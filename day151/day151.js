@@ -1,0 +1,15 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w,WEBGL)+noStroke()
+lights(background(90))
+for(i=w;i-=20;)
+for(j=w;j-=20;){
+push()
+translate(j-w/2+9*cos(t+i),i-w/2+9*cos(t+j))
+rotate((i+j)/3+t)
+rotateX(t+i+j)
+box(abs(sin(PI/180*mag(j,i)+t))*12)
+pop()
+}
+t+=PI/90
+}

@@ -1,0 +1,13 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w,WEBGL)+normalMaterial()+stroke(w,w,0)
+lights(background(90))
+for(y=-4;y<5;y++)
+for(x=-4;x<4;x++)
+push(),
+translate(x*98+(y&1?49:0),y*88),
+rotateX(PI/15*(x+y)+t),
+rotateY(PI/45*x+t),
+pop(cylinder(50,9,7));
+t+=PI/180
+}

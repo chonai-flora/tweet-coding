@@ -1,0 +1,12 @@
+v=0
+draw=_=>{
+v||createCanvas(w=640,w)+fill(v=w*2,200)+textAlign(c=CENTER,c)
+background(0)
+for(p=w;p-=4;){
+push(textSize(s=noise(p)*99))
+translate(p,(p+v*noise(p))%(w+s*2)-s)
+rotate(PI/180*(v-p))
+pop(text(String.fromCodePoint(128670+int(s+p)%25),0,0))
+}
+v+=3
+}

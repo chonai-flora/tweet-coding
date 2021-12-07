@@ -1,0 +1,15 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w,WEBGL)+noStroke()
+lights(background(90))
+rotateX(-PI/6)
+for(i=5;i--;)
+for(j=200;j--;){
+push(u=(t+j)/200)
+rotateY(atan(tan(PI*(t+u)))+mag(i,j))
+translate(w/2*u*cos(i*TAU/5),w/2*u*sin(i*TAU/5))
+box(j/25)
+pop()
+}
+t+=PI/540
+}

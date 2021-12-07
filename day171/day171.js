@@ -1,0 +1,13 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w,WEBGL)+noStroke(specularMaterial(w,0,w,192))
+background(0,0,64)
+lights(Y=rotateY)
+Y(PI/6)
+for(i=20;i-=2;pop(box(75))){
+push(t=v/50%2)
+Y((4-i+t)/3)
+translate(0,(i-t-8)*40,180)
+Y(v/50)
+}
+}

@@ -1,0 +1,12 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke(colorMode(HSB,1))
+background(0,.1)
+translate(h=w/2,h)
+for(u=t;u<TAU+t;u+=PI/60){
+rotate(u-t)
+fill(noise(sin(u)*2),1,1)
+circle(160*sqrt(sin(u)-cos(t)),160*(tan(u)+cos(u)),abs(acos(sin(u)))*5+5)
+}
+t+=PI/180
+}

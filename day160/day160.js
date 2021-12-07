@@ -1,0 +1,13 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w,WEBGL)
+background(0)
+for(i=w;i-=64;)
+for(j=w;j-=64;pop(plane(50))){
+push(n=noise)
+translate(i-w/2,j-w/2)
+for(u=r=0;u<TAU;u+=PI/16)
+if((d=dist(v*cos(u+n(i))+320,v*sin(u+n(j))+320,i,j))<20)rotate(r=PI/45*d)
+fill(r*w)
+}
+}
