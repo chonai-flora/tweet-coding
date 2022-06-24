@@ -1,0 +1,13 @@
+t=0;
+draw=_=>{
+t||createCanvas(w=640,w,WEBGL)+fill(w,128);
+T=translate;
+X=rotateX;
+Y=rotateY;
+background(192);
+T(0,160*asin(cos(t+=PI/180))-25);
+Y(t);
+X(t*2);
+for(i=6;i--;square(0,0,99))
+i%2?T(99,0,0)+Y(u=PI/2):T(0,99,0)+X(-u);
+}

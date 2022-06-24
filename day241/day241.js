@@ -1,0 +1,12 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w,WEBGL)+noStroke()
+lights(background(0))
+for(u=t;u<TAU+t;u+=PI/20)
+for(r=360;r-=20;pop(box(a/20))){
+push(fill(360-(a=mag(x=r*cos(u)+sin(v=r*PI/90+t*4)*50,y=r*sin(u)+cos(v)*50))))
+rotateX(.5)
+translate(x,y-99)
+}
+t+=PI/360
+}

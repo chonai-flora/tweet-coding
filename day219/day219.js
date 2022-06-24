@@ -1,0 +1,13 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w,WEBGL)+normalMaterial()
+background(0)
+for(i=360;i--;pop(box(mag(x,y)/12))){
+push()
+rotate(PI/(90+sin(t)*4)*i)
+translate(x=cos(u=i/w*PI*180)*(r=sin(u+i+i/w+t)*450),y=sin(u)*r)
+rotate(TAU/1.5*i)
+rotateY(TAU/3)
+}
+t+=PI/360
+}

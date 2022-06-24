@@ -1,0 +1,11 @@
+v=0
+draw=_=>{
+v||createCanvas(w=640,w)+fill(0,v=w*2,v,192)+textAlign(CENTER)
+background(0,96)
+for(p=w;p-=4;pop(text(char(10052+p%3),0,0))){
+push(textSize(s=noise(p)*88))
+translate(p,(p+v*noise(p))%(w+s))
+scale(sin(PI/180*(v-p)),1)
+}
+v+=3
+}

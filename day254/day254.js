@@ -1,0 +1,13 @@
+setup=_=>{
+createCanvas(w=640,w,WEBGL)
+noStroke(g=createGraphics(x=t=99,99))
+for(;x--;texture(g))
+for(y=99;y--;g.square(x,y,1))
+g.stroke([w,'blue','gold'][int(noise(x/9,y/9)*9)%3])
+}
+draw=_=>{
+lights(background(0))
+rotate(.41)
+rotateY(t+=.02)
+sphere(160)
+}

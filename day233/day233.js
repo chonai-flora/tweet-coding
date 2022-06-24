@@ -1,0 +1,1 @@
+setup=_=>{createCanvas(w=640,w);background(w);textAlign(CENTER);beginShape();scale(.5);for(i=2;i<w;i++){n=i*1.3;x=n*cos(t=PI/90*i*n)+w;y=n*sin(t)+w;textSize(18);for(j=b=2;++j<i;)if(i%j==0){b=0;break}if(b)vertex(x,y);text(i,x,y);}noFill(stroke(128));endShape()}

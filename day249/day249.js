@@ -1,0 +1,15 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w)+noStroke(fill(w,w,0))
+background(0,64)
+T=translate
+T(h=w/2,h)
+for(i=v%18;i<450;i+=18)
+for(u=t=atan(tan(i/18))/9;u<TAU+t;u+=PI/9){
+push()
+rotate(u-t)
+T(x=i*cos(u*2),y=i*sin(u*2))
+square(0,0,mag(x,y)/25)
+pop()
+}
+}

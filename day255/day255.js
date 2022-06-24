@@ -1,0 +1,11 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)
+background(0)
+for(x=0;x<687;x+=49)
+for(y=0;y<667;y+=37){
+textSize(max(5,sin(u=t+50*x+y+y)*37+5))
+text(String.fromCodePoint(128524+x/49+y/37),x+cos(u)*24,y-24+cos(u)*24)
+}
+t+=PI/90
+}

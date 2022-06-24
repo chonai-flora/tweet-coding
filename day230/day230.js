@@ -1,0 +1,1 @@
+setup=_=>{createCanvas(w=640,w);background(0,128,w);noStroke(V=vertex,N=noise);fill(192,w,w,192);beginShape();V(w,w);for(i=w;i-=4;V(i-4,-1/sqrt(TAU+N(i/25))*exp(-sq((i-280)/160)/3)*w*2+700)){textSize(n=N(i)*84);text("❄",i,(i+w*n)%w)}fill(w);V(0,w);endShape()}

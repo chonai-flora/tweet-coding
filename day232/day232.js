@@ -1,0 +1,15 @@
+t=0
+z=_=>push()+rotate(PI/2+u)
+draw=_=>{
+t||createCanvas(w=640,w,WEBGL)+normalMaterial()
+background(32)
+a=180
+T=translate
+for(u=t+=PI/a;u<TAU+t;u+=PI/45){
+z(p=cos(u+PI))
+T(120*p,a*pow(p,p))
+z(pop(box(25*p+5)))
+T(a*pow(q=sin(u),q),120*q)
+pop(box(25*q+5))
+}
+}

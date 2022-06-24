@@ -1,0 +1,12 @@
+setup=_=>createCanvas(w=640,w);
+draw=_=>{
+background(0);
+for(i=w;i--;endShape()){
+j=i*2%128;
+k=int(i/32);
+beginShape();
+for(l=3;l--;)
+vertex(x=40*cos(t=TAU/3*(l+j/4)+PI/2)+j*20-(k%4?40:0),y=40*sin(t)+k*32+(j%4?40:20));
+fill(dist(x,y,mouseX,mouseY)*2);
+}
+}

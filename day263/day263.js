@@ -1,0 +1,12 @@
+t=0
+f=a=>[450*cos(a)+w/2,450*sin(a)+w/2]
+draw=_=>{
+t||createCanvas(w=640,w)+(B=blendMode)
+B(BLEND)
+background(0)
+B(DIFFERENCE)
+for(u=0;u<PI;u+=PI/7)
+for(v=u;v<PI+u;v+=TAU/7)
+quad(...f(u+t),...f(v),...f(u+t+PI),...f(v+PI));
+t+=PI/360
+}

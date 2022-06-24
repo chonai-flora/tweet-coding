@@ -1,0 +1,16 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+fill(w)+textSize(48)
+background(0)
+for(u=0;u<TAU;u+=PI/8){
+stroke(w)
+noStroke(line(h=w/2,h,x=240*cos(v=u-t/2)+h,y=240*sin(v)+h))
+for(v=0;v<TAU;v+=PI/4){
+push()
+translate(x,y)
+rotate(v+t)
+pop(text("⚔",0,0))
+}
+}
+t+=.01
+}
