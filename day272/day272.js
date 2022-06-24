@@ -1,0 +1,14 @@
+t=0
+f=$=>9*u*$(u)+w/2
+g=n=>n*TAU*sin(u*u-t)-t+u+PI/2
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke(B=blendMode)+colorMode(HSB,9)
+B(BLEND)
+background(0)
+B(ADD)
+for(u=0;u<TAU*7;u+=.2){
+fill(u*u%9,9,9,8)
+arc(f(cos),f(sin),v=u*PI,v,g(-1),g(1),OPEN)
+}
+t+=PI/270
+}

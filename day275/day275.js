@@ -1,0 +1,13 @@
+t=0
+f=$=>h*sin(t)*$(u)+h
+draw=_=>{
+t||createCanvas(w=640,w)+textSize(12)
+background(w,64)
+scale(2)
+if(abs(v=sin(t+=.02))<.5)
+circle(h=w/4,h,320*v)
+else
+for(u=0;u<TAU;u+=PI/9){
+text(String.fromCodePoint(~~(t+u*3)+128524),f(cos)-6,f(sin)+6)
+}
+}

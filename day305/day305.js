@@ -1,0 +1,13 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w)+noStroke()
+background(0)
+for(x=0;x<705;x+=64)
+for(y=0;y<=w;y+=64){
+push(fill(x%214+42,y%214,320*noise(x+y)))
+translate((v+x)%704,y)
+scale(sin(t=PI/180*(y+v)),cos(t))
+square(0,0,64*cos(y-x+v/99))
+pop()
+}
+}

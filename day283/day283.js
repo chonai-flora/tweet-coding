@@ -1,0 +1,13 @@
+v=0
+p=[]
+draw=_=>{
+v||createCanvas(w=640,w)+noFill(colorMode(HSB,9))
+B=blendMode
+R=random
+B(BLEND)
+background(0,.2)
+B(ADD)
+if(v++%30==0)p.push([R(9),R(w),R(w),0])
+p.map(([c,x,y,r])=>stroke(c,9,9,5)+circle(x,y,r))
+p=p.filter(q=>q[3]++<w/2)
+}

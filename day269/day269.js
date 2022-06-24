@@ -1,0 +1,12 @@
+t=0
+v=$=>240*abs(sin(u))*($(t/50+u)+$(noise(1)*9*u))+w
+draw=_=>{
+t++||createCanvas(w=640,w)+colorMode(HSB,7)
+background(0,.7)
+scale(.5)
+for(u=0;u<TAU;u+=.07){
+noStroke(fill(u,7,7))
+square(x=v(tan),y=v(sin),s=dist(w,w,x,y)/25)
+if(s<8)stroke(w),line(w,w,x,y)
+}
+}

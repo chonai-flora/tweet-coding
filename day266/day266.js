@@ -1,0 +1,14 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+fill(w)
+background(0,128)
+for(i=w;i-=64;)
+for(u=0;u<TAU;u+=PI/6){
+push(n=noise(i))
+textSize(s=int(noise(i)*120))
+translate(i,(w*n+t)*w%(w+2*s)-s)
+rotate(t+n+u)
+pop(text("⚔",0,0))
+}
+t+=.01
+}

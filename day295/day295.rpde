@@ -1,0 +1,14 @@
+settings<-function(){size(640,640)}
+draw<-function(){
+clear()
+noStroke()
+for(i in -1:27)
+for(j in -1:22){
+x<-i*25
+y<-j*31
+z<-24*sin(frameCount/72+50*x+x+y)
+r<-28*sin(mag(y,x)/72)
+fill(x%%256,y%%256,10*abs(z),192)
+rect(x-z,y-z,r,r)
+}
+}

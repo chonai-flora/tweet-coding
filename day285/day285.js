@@ -1,0 +1,14 @@
+v=0
+t=(x,y)=>text(String.fromCodePoint(9*i+10241+n),x,y)
+draw=_=>{
+v||createCanvas(w=640,w)+fill(0,192)+textSize(32)
+background(w,16)
+for(i=15;i--;){
+m=noise(n=~~(i+v)%64)
+t(p=(i+m)*20,q=4*m*w%w)
+t(q,p)
+t(w-p,q)
+t(q,w-p)
+}
+v+=.2
+}

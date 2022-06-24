@@ -1,0 +1,15 @@
+v=0
+f=_=>text("🎼",-s*1.2,0)
+draw=_=>{
+v||createCanvas(w=640,w)+(v=w*3)
+B=blendMode
+B(BLEND)
+background(0)
+B(ADD)
+for(i=w;i-=16;pop(f(scale(-1,1)))){
+push(textSize(s=noise(i)*96))
+translate(i,(i+v*s/96)%(w+s))
+f(scale(sin((v-i)/99),1))
+}
+v+=3
+}

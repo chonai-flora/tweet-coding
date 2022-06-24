@@ -1,0 +1,16 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w)+stroke(192)
+B=blendMode
+B(BLEND)
+background(0)
+B(ADD)
+scale(2)
+translate(h=w/4,h)
+for(r=n=256;(r-=2)>8;){
+push(fill(n-r,r,n*abs(a=sin(v/h+r/2)),192))
+rotate(r*exp(2)-v/2e3)
+circle(r,0,12*a+5)
+pop(line(0,r,0,50*a+r))
+}
+}

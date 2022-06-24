@@ -1,0 +1,15 @@
+f=_=>fill(noise(x+y)*9,7,7)
+setup=_=>{
+createCanvas(w=640,w)
+colorMode(HSB,9)
+noStroke(background(5))
+for(x=w;x-=64;)
+for(y=w;y-=64;pop()){
+push(C=circle)
+f(translate(x,y))
+C(0,0,60)
+fill(9)
+C(0,0,45)
+for(f(i=8);i--;triangle(15,-3,2,0,15,3))rotate(PI/4);
+}
+}

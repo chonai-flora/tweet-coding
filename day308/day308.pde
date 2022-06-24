@@ -1,0 +1,1 @@
+size(640,640);background(-1);textFont(createFont("Segoe UI Symbol",72));for(int i=0,j,k,l;i<4;i++)for(j=0;j<14;j++){k=j>11?j-1:j;l=k%13;fill(i<1||i>2?0:255,0,0);if(j!=11)text(new String(Character.toChars((127137+16*i+l+int(l>10)))),48*k+8,80*(i+k/3.+.5)+25);}

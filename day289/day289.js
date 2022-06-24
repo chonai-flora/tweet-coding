@@ -1,0 +1,11 @@
+setup=_=>{
+createCanvas(w=640,w)
+noStroke(textSize(s=80))
+for(i=8;i--;)
+for(j=8;j--;){
+fill((i+j)%2?192:w)
+square(i*s,j*s,s)
+fill(0)
+text(j<2?"♜♞♝♛♚♝♞♜♟"[j>0?8:i]:j>5?"♖♘♗♕♔♗♘♖♙"[j<7?8:i]:'',i*s,j*s+70)
+}
+}

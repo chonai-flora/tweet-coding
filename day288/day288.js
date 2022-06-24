@@ -1,0 +1,11 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w)
+background(0)
+for(i=560;i-=70;)
+for(j=18,r=(k=i+v/2)%490;j--;pop(text("👻",0,0))){
+push(textSize(s=dist(h=w/2,h,x=r*cos(u=k/90+PI/9*j)+h,y=r*sin(u)*(i%140/35-1)+h)/9+1))
+translate(x,y)
+scale(cos(u*5),1)
+}
+}

@@ -1,0 +1,15 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noFill()
+background(0)
+translate(h=w/2,h)
+for(r=270;r-=18;){
+stroke(w,max(r-18,128))
+rotate(acos(cos(t)/2))
+strokeWeight(r/36)
+for(u=0;u<TAU;u+=PI/18){
+circle(r*acos(tan(t-u)),r*atan(cos(u)),r/9+1)
+}
+}
+t+=PI/360
+}

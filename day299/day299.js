@@ -1,0 +1,12 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w)
+noStroke(translate(h=w/2,h))
+for(i=1;i++<8;fill(i%2*w)){
+circle(0,0,2*(r=w-72*i))
+for(textSize(j=n=~~(r/8+9));j--;pop(text(String.fromCodePoint(77847+i+j),0,-r))){
+push()
+rotate(TAU/n*j+v/99*(i%2*2-1))
+}
+}
+}

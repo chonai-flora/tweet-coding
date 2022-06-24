@@ -1,0 +1,13 @@
+v=0
+$=[]
+draw=_=>{
+v||createCanvas(w=640,w)+noStroke(R=random)+textSize(64)
+background(0,9)
+fill(0)
+rect(0,0,w,108)
+fill(w)
+text("꧁꧂",X=mouseX,36)
+if(v++%15==0)$.push([R(108)+64+X,116,R(2,9)])
+$.map(([x,y,r])=>circle(x,y,r))
+$=$.filter(q=>(q[1]+=q[2]/3)<w)
+}

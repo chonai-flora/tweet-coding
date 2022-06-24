@@ -1,0 +1,12 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w)+noStroke(B=blendMode)
+B(BLEND)
+background(64,8)
+B(ADD)
+for(x=-v%71;x<711;x+=71)
+for(y=-x/2;y<694;y+=63){
+fill((sin(PI/90*v)+1)*16,y%24,x%32)
+circle(x,y,18*(sin(PI/45*(x+y))+2))
+}
+}

@@ -1,0 +1,12 @@
+setup=_=>{
+createCanvas(w=640,w)
+R=random
+p=[]
+for(i=3*w;i--;f?p.push([x,y,r]):textAlign(c=CENTER,c)){
+x=R(w)
+y=R(w)
+r=f=R(w/3)
+p.map(([X,Y,R])=>f=f?(dist(x,y,X,Y)>(r+R)/2):f)
+}
+p.map(([x,y,r])=>textSize(r*1.2)+text(char(9390+~~(w+=.2)),x,y))
+}

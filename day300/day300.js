@@ -1,0 +1,13 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w)+stroke(w)
+background(0)
+scale(2)
+translate(h=w/4,h)
+for(r=n=256;r-=2;){
+push(fill(n-r,r,n*abs(a=sin(v/h+r/2))))
+rotate(r*exp(2)-v/2e3)
+line(0,b=(r*2+v)%450+8,0,50*a+b)
+pop(circle(b,0,12*a+5))
+}
+}

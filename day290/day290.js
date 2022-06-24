@@ -1,0 +1,10 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke(textSize(36))+textAlign(c=CENTER,c)
+background(128,32)
+circle(h=w/2,h,(r=h*abs(asin(sin(t+=PI/360))))*2)
+for(i=0;i<=w;i+=40)
+for(j=0;j<=w;j+=40){
+text(dist(i,j,h,h)<r?"🌷":"🥀",i,j)
+}
+}

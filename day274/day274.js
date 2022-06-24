@@ -1,0 +1,10 @@
+v=0
+p=[]
+draw=_=>{
+v++||createCanvas(w=640,w)+textAlign(c=CENTER,c)
+R=random
+background(0,6)
+if(v%6==0)p.push([R(w),R(w),9,R(9,196)])
+p.map(([x,y,r])=>fill(noise(x+y)*256,x%256,y%256)+textSize(r)+text("❄",x,y))
+p=p.filter(q=>q[2]++<q[3])
+}

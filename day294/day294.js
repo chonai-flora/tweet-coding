@@ -1,0 +1,17 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w)+fill(w,192)
+background(0,128,w)
+beginShape()
+V=vertex
+V(0,w)
+for(i=0;i<=w;i+=5){
+n=noise(i/72)
+m=(i-w/2)/72
+V(i,w-w*pow(3,-m*m/9-n))
+textSize(n*=84)
+text("*",i,(i+v/72*n+w*n+n)%(w+n))
+}
+V(w,w)
+endShape()
+}

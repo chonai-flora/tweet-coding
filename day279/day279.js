@@ -1,0 +1,13 @@
+t=0
+draw=_=>{
+t||createCanvas(w=640,w)+noStroke()
+background(0,64)
+for(x=675;x-=25;)
+for(y=682;y-=31;){
+z=24*cos(u=t+50*x+2*y)
+s=30*sin(u)+9
+fill(0,w,w,s<9?w:128)
+square(z-25+x,z-31+y,s)
+}
+t+=PI/90
+}

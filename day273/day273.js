@@ -1,0 +1,9 @@
+v=0
+p=[]
+draw=_=>{
+v++||createCanvas(w=640,w)+noStroke(R=random)
+background(0,9)
+if(v%6==0)p.push([R(w),0,R(2,15)])
+p.map(([x,y,s])=>circle(s*sin(v/9+s)+x,y,s))
+p=p.filter(q=>(q[1]+=q[2]/2)<w)
+}
