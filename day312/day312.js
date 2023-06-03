@@ -1,0 +1,15 @@
+v=0
+draw=_=>{
+v++||createCanvas(w=640,w)
+T=textSize
+background(h=w/2)
+fill(w)
+rect(0,180,h,20)
+arc(h,h,540,540,PI/4*5,-PI/4,PIE)
+T(24)
+text("💧",308,v*4%350+180)
+fill(0)
+triangle(h,h,q=w/4,q,480,q)
+T(q)
+text("☕",208,540)
+}

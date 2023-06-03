@@ -1,0 +1,2 @@
+#include<Siv3D.hpp>
+void Main(){for(double t=0,c=0,d;System::Update();Scene::SetBackground(ColorF{c-=.1}))for(d=360,t+=.01;d--;){Vec2 v=(500*sin(t+d)*Vec2{cos(d/4),sin(d/4)}).rotated(d+t/9)+Vec2{400,300};Circle{v,5}.draw();if(v.distanceFrom(Cursor::Pos())<5)c=1;}}

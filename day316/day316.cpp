@@ -1,0 +1,2 @@
+#include<Siv3D.hpp>
+void Main(){Texture t{U"👻"_emoji};for(int v=0,i,j,k,r;System::Update();v++)for(i=630;i-=70;)for(j=18,r=(k=i+v/2)%560;j--;){auto u=k/90.+.35*j;Vec2 p{r*cos(u)+400,r*sin(u)*(i%140/35-1)+300};t.resized(p.distanceFrom(400,300)/5).scaled(cos(5*u),1).drawAt(p);}}
